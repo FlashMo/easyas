@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Flash 莫崇健</Author>
+  <LastAuthor>Flash 莫崇健</LastAuthor>
+  <Created>2016-06-10T09:41:58Z</Created>
+  <LastSaved>2016-09-03T15:34:50Z</LastSaved>
+  <Company>YYGame</Company>
+  <Version>14.0</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7940</WindowHeight>
+  <WindowWidth>25600</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" x:Family="Swiss" ss:Size="12"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Center"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="属性换算">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="6" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="134"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#%</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2"><Data ss:Type="String">生命</Data></Cell>
+    <Cell><Data ss:Type="String">攻击</Data></Cell>
+    <Cell><Data ss:Type="String">护甲</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">基础属性</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">成长属性</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell><Data ss:Type="Number">0.125</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="51"/>
+   <Row ss:AutoFitHeight="0" ss:Height="40">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">CNMAA&#13;我是高手阿</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="地图">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="104"/>
+   <Column ss:AutoFitWidth="0" ss:Width="70"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="97"/>
+   <Column ss:AutoFitWidth="0" ss:Width="134"/>
+   <Column ss:AutoFitWidth="0" ss:Width="252"/>
+   <Column ss:AutoFitWidth="0" ss:Width="176"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#map</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$Map</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">test</Data></Cell>
+    <Cell><Data ss:Type="String">测试地图</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#xml:sectionArr</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$Section</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">chance</Data></Cell>
+    <Cell><Data ss:Type="String">waveNumArrData</Data></Cell>
+    <Cell><Data ss:Type="String">waveMonsterNumArrData</Data></Cell>
+    <Cell><Data ss:Type="String">waveMonsterCardArrData</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">s1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">3,4,5</Data></Cell>
+    <Cell><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="String">小战士:1,小法师:1,小猎人:1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">s2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">3,4,5</Data></Cell>
+    <Cell><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱:1,牧师:5,山洞蝙蝠:5,洋娃娃:5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#endxml</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <Zoom>125</Zoom>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="怪物">
+  <Table ss:ExpandedColumnCount="19" ss:ExpandedRowCount="20" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:Index="3" ss:AutoFitWidth="0" ss:Width="86"/>
+   <Column ss:Index="14" ss:AutoFitWidth="0" ss:Width="69"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#battler</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$Battler</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">skin</Data></Cell>
+    <Cell><Data ss:Type="String">level</Data></Cell>
+    <Cell><Data ss:Type="String">lifeBase</Data></Cell>
+    <Cell><Data ss:Type="String">attackBase</Data></Cell>
+    <Cell><Data ss:Type="String">armorBase</Data></Cell>
+    <Cell><Data ss:Type="String">lifeGrow</Data></Cell>
+    <Cell><Data ss:Type="String">attackGrow</Data></Cell>
+    <Cell><Data ss:Type="String">armorGrow</Data></Cell>
+    <Cell><Data ss:Type="String">%生命</Data></Cell>
+    <Cell><Data ss:Type="String">%攻击</Data></Cell>
+    <Cell><Data ss:Type="String">%护甲</Data></Cell>
+    <Cell><Data ss:Type="String">%生命成长</Data></Cell>
+    <Cell><Data ss:Type="String">%攻击成长</Data></Cell>
+    <Cell><Data ss:Type="String">%护甲成长</Data></Cell>
+    <Cell><Data ss:Type="String">%生命修正</Data></Cell>
+    <Cell><Data ss:Type="String">%攻击修正</Data></Cell>
+    <Cell><Data ss:Type="String">%护甲修正</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="16">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell><Data ss:Type="String">Fighter01</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">27.5</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">Mage06</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">12.5</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">12.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">1.25</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">1.25</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">13.75</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">13.75</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">Cleric01</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">48</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">Hunter03</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">38.5</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.3</Data></Cell>
+    <Cell><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">Monster01</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">27.5</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">Monster02</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">48</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">Monster03</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">96</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">Monster04</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">198</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">Monster05</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">Monster06</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">136</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">66</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">Monster07</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">320</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">Monster08</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">Monster09</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">70</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">1.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">490</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell><Data ss:Type="Number">0.3</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">Monster10</Data></Cell>
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">264</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">114</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">Monster11</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">450</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">125</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">Monster12</Data></Cell>
+    <Cell><Data ss:Type="Number">60</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">1170</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">Monster13</Data></Cell>
+    <Cell><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">680</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">270</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">Monster14</Data></Cell>
+    <Cell><Data ss:Type="Number">99</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*RC[9]*0.5"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:Formula="=RC[12]+100*0.25*RC[9]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[6]*20"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.25*20"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:Formula="=RC[6]*0.125*20"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-7]*RC[-3]"><Data ss:Type="Number">1040</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-8]*RC[-3]"><Data ss:Type="Number">272.5</Data></Cell>
+    <Cell ss:Formula="=RC[-6]+RC[-9]*RC[-3]"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <Zoom>125</Zoom>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>10</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="怪物卡">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="26" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="112" ss:Span="2"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="84"/>
+   <Column ss:AutoFitWidth="0" ss:Width="100"/>
+   <Column ss:AutoFitWidth="0" ss:Width="88"/>
+   <Column ss:AutoFitWidth="0" ss:Width="155"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#itemCard</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$MonsterCard</Data></Cell>
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">battlerName</Data></Cell>
+    <Cell><Data ss:Type="String">battlerID</Data></Cell>
+    <Cell><Data ss:Type="String">battlerLevel</Data></Cell>
+    <Cell><Data ss:Type="String">itemDropData</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">%</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士卡片:1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">小法师卡片:1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师卡片:1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人卡片:1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="String">魔王卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+    <Cell><Data ss:Type="Number">60</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+    <Cell><Data ss:Type="Number">80</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+    <Cell><Data ss:Type="Number">99</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神卡片:0.1</Data></Cell>
+   </Row>
+   <Row ss:Index="23" ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#initTeam</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$Object</Data></Cell>
+    <Cell><Data ss:Type="String">cardID</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">pos1</Data></Cell>
+    <Cell><Data ss:Type="String">冒险者</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">pos2</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>27</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="掉落物品">
+  <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="21" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="65" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="91"/>
+   <Column ss:AutoFitWidth="0" ss:Width="103"/>
+   <Column ss:AutoFitWidth="0" ss:Width="124"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">#item</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">$Item</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">monsterCardID</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者卡片</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者卡片</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冒险者</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士卡片</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士卡片</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">小战士</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小法师卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小法师卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小法师</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小牧师卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小牧师</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">小猎人卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人卡片</Data></Cell>
+    <Cell><Data ss:Type="String">小猎人</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">大黄蜂卡片</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂卡片</Data></Cell>
+    <Cell><Data ss:Type="String">大黄蜂</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">山洞蝙蝠卡片</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">山洞蝙蝠卡片</Data></Cell>
+    <Cell><Data ss:Type="String">山洞蝙蝠</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">洋娃娃卡片</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃卡片</Data></Cell>
+    <Cell><Data ss:Type="String">洋娃娃</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">毒蘑菇卡片</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇卡片</Data></Cell>
+    <Cell><Data ss:Type="String">毒蘑菇</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">蝎子卡片</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子卡片</Data></Cell>
+    <Cell><Data ss:Type="String">蝎子</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">软泥怪卡片</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪卡片</Data></Cell>
+    <Cell><Data ss:Type="String">软泥怪</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">宝箱卡片</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱卡片</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">不朽伯爵卡片</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵卡片</Data></Cell>
+    <Cell><Data ss:Type="String">不朽伯爵</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年树妖怪卡片</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪卡片</Data></Cell>
+    <Cell><Data ss:Type="String">千年树妖怪</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">千年毒虫卡片</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫卡片</Data></Cell>
+    <Cell><Data ss:Type="String">千年毒虫</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">魔王卡片</Data></Cell>
+    <Cell><Data ss:Type="String">魔王卡片</Data></Cell>
+    <Cell><Data ss:Type="String">魔王</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">巨石像卡片</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像卡片</Data></Cell>
+    <Cell><Data ss:Type="String">巨石像</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔龙卡片</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙卡片</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔龙</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">上古魔神卡片</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神卡片</Data></Cell>
+    <Cell><Data ss:Type="String">上古魔神</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>-4</HorizontalResolution>
+    <VerticalResolution>-4</VerticalResolution>
+   </Print>
+   <PageLayoutZoom>0</PageLayoutZoom>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
