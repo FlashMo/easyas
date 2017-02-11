@@ -1,6 +1,6 @@
 package com.core.anima.tween.builder
 {
-	import com.core.anima.AnimaTarget;
+	import com.core.anima.base.AnimaTarget;
 	import com.greensock.TimelineLite;
 	import com.greensock.TweenLite;
 	import com.greensock.core.Animation;

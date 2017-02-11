@@ -3,7 +3,10 @@ package com.core.view
 	import flash.display.DisplayObjectContainer;
 	import flash.display.Sprite;
 	
-	public class GameLayer extends Sprite
+	/**
+	 * 基本View，可以设置skin和通过query对skin进行查找和修改
+	 * */
+	public class ViewBase extends Sprite
 	{
 		private var _skin:Sprite;
 		

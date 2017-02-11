@@ -1,7 +1,7 @@
 package com.core.anima.tween
 {
-	import com.core.anima.AnimaTarget;
-	import com.core.anima.BaseAnima;
+	import com.core.anima.base.AnimaTarget;
+	import com.core.anima.base.BaseAnima;
 	import com.core.anima.tween.builder.ITweenBuilder;
 	import com.core.anima.tween.builder.MultipleTweenBuilder;
 	import com.core.anima.tween.builder.TweenBuilder;

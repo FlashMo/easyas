@@ -9,6 +9,9 @@ package com.core.db.loader
 	import flash.net.URLRequest;
 	import flash.system.ApplicationDomain;
 	
+	/**
+	 * 多文件加载类：加载多个文件，在所有文件加载完成后回调并返回各个文件的数据。
+	 * */
 	public class MultiLoader extends EventDispatcher
 	{
 		private var _loadMap:Object = new Object();

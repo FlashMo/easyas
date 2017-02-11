@@ -63,28 +63,28 @@ package com.core.view
 		
 		public function move(dx:Number, dy:Number):ViewQuery {
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.move(dx, dy, obj);
+				Mlayout.move(dx, dy, obj);
 			}
 			return this;
 		}
 		
 		public function pos(px:Number, py:Number, obj:DisplayObject, trans2LT:Boolean = false):ViewQuery {
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.pos(px, py, obj, trans2LT);
+				Mlayout.pos(px, py, obj, trans2LT);
 			}
 			return this;
 		}
 		
 		public function posX(px:Number, trans2LT:Boolean = false):ViewQuery {
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.posX(px, obj, trans2LT);
+				Mlayout.posX(px, obj, trans2LT);
 			}
 			return this;
 		}
 		
 		public function posY(py:Number, obj:DisplayObject, trans2LT:Boolean = false):ViewQuery {
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.posY(py, obj, trans2LT);
+				Mlayout.posY(py, obj, trans2LT);
 			}
 			return this;
 		}
@@ -92,7 +92,7 @@ package com.core.view
 		public function left(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.left(obj, delta, container, trans2LT);
+				Mlayout.left(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
@@ -100,7 +100,7 @@ package com.core.view
 		public function right(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.right(obj, delta, container, trans2LT);
+				Mlayout.right(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
@@ -108,7 +108,7 @@ package com.core.view
 		public function center(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.center(obj, delta, container, trans2LT);
+				Mlayout.center(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
@@ -116,7 +116,7 @@ package com.core.view
 		public function top(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.top(obj, delta, container, trans2LT);
+				Mlayout.top(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
@@ -124,7 +124,7 @@ package com.core.view
 		public function bottom(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.bottom(obj, delta, container, trans2LT);
+				Mlayout.bottom(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
@@ -132,25 +132,25 @@ package com.core.view
 		public function middle(delta:Number = 0, container:*=null, trans2LT:Boolean = false):ViewQuery {
 			if(!container) container = this._container;
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.middle(obj, delta, container, trans2LT);
+				Mlayout.middle(obj, delta, container, trans2LT);
 			}
 			return this;
 		}
 		
 		public function anchor(rx:Number, ry:Number, trans2LT:Boolean = false):ViewQuery {
 			for each(var obj:DisplayObject in this._arr) {
-				Mview.anchor(rx, ry, obj, trans2LT);
+				Mlayout.anchor(rx, ry, obj, trans2LT);
 			}
 			return this;
 		}
 		
 		public function spaceHorazontal(begin:Number, end:Number, trans2LT:Boolean = true):ViewQuery {			
-			Mview.spaceHorazontal(begin, end, this._arr, trans2LT);
+			Mlayout.spaceHorazontal(begin, end, this._arr, trans2LT);
 			return this;
 		}
 		
 		public function spaceVertical(begin:Number, end:Number, trans2LT:Boolean = true):ViewQuery {
-			Mview.spaceVertical(begin, end, this._arr, trans2LT);
+			Mlayout.spaceVertical(begin, end, this._arr, trans2LT);
 			return this;
 		}
 	}

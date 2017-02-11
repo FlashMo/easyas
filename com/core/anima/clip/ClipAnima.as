@@ -1,9 +1,9 @@
 package com.core.anima.clip
 {
-	import com.core.anima.AnimaTarget;
-	import com.core.anima.BaseAnima;
-	import com.core.anima.DummyTarget;
-	import com.core.anima.IAnima;
+	import com.core.anima.base.AnimaTarget;
+	import com.core.anima.base.BaseAnima;
+	import com.core.anima.base.DummyTarget;
+	import com.core.anima.base.IAnima;
 	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;

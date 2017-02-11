@@ -4,6 +4,9 @@ package com.core.view
 	import flash.display.Sprite;
 	import flash.geom.Rectangle;
 	
+	/**
+	 * 基本游戏根容器
+	 * */
 	public class GameStage extends Sprite
 	{
 		private var _stageRect:Rectangle = new Rectangle();

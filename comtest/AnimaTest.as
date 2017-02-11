@@ -1,8 +1,8 @@
 package comtest
 {
 	import com.core.db.Mdb;
-	import com.core.anima.AnimaTarget;
-	import com.core.anima.IAnima;
+	import com.core.anima.base.AnimaTarget;
+	import com.core.anima.base.IAnima;
 	import com.core.anima.clip.ClipAnima;
 	import com.core.anima.frame.FrameAnima;
 	import com.core.anima.tween.TimeLineAnima;

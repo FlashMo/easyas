@@ -1,9 +1,9 @@
 package com.core.anima.tween
 {
-	import com.core.anima.AnimaTarget;
-	import com.core.anima.BaseAnima;
-	import com.core.anima.DummyTarget;
-	import com.core.anima.IAnima;
+	import com.core.anima.base.AnimaTarget;
+	import com.core.anima.base.BaseAnima;
+	import com.core.anima.base.DummyTarget;
+	import com.core.anima.base.IAnima;
 	import com.greensock.TimelineLite;
 	import com.greensock.TweenLite;
 	import com.greensock.data.TweenLiteVars;

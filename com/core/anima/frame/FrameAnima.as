@@ -1,8 +1,8 @@
 package com.core.anima.frame
 {
-	import com.core.anima.AnimaTarget;
-	import com.core.anima.BaseAnima;
-	import com.core.anima.IAnima;
+	import com.core.anima.base.AnimaTarget;
+	import com.core.anima.base.BaseAnima;
+	import com.core.anima.base.IAnima;
 	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;

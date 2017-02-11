@@ -1,4 +1,4 @@
-package com.core.anima
+package com.core.anima.base
 {
 	import flash.geom.Point;
 
