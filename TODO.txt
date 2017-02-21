@@ -1,0 +1,5 @@
+2017-02-19
+//TweenAnima改造成 一个 TweenAnima类加上多种TweenAnimaPrototype以实现不同缓动动画，从而于动画系统相统一
+//Prototype.target方法加入val属性以满足直接设置target的需求
+as3在同一个文件中定义多个类或函数的可能?
+as3常量定义?

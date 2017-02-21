@@ -1,8 +1,14 @@
 package com.core.anima.base
 {
+	import flash.display.Bitmap;
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
-
+	import flash.display.MovieClip;
+	import flash.display.Sprite;
+	
+	/**
+	 * 动画目标类，通过name在container中查找目标，若指定name的对象不存在则设法创建一个动画目标。
+	 * */
 	public class AnimaTarget
 	{
 		public var targetName:String;
@@ -21,39 +27,40 @@ package com.core.anima.base
 		
 		public function clone():AnimaTarget {
 			var tmp:AnimaTarget = new AnimaTarget(this.targetName, this.targetClass);
+			tmp.setVal(this._target);
 			return tmp;
 		}
 		
 		/**
-		 * load anima target from parent
-		 * @param p the parent
-		 * @param factory if there is no child with targetName call the factoryFunc to create animation target
-		 *  the formate of factoryFunc is <br> func(p:DisplayObjectContainer, data:AnimaTarget):DisplayObject.
+		 * 在容器内寻找一个显示对象，若找不到则尝试创建它
+		 * @param p 要查找的容器
+		 * @param save 可选 是否保存找到的对象，默认保存
 		 * */
-		public function load(p:DisplayObjectContainer, factory:Function = null):DisplayObject {
+		public function findAt(p:DisplayObjectContainer, save:Boolean = true):DisplayObject {
+			if(!p) return this._target;
+			if(this._target && this._target.parent == p) return this._target;
 			this._target = null;
 			if(this.targetName) {
 				this._target = p.getChildByName(this.targetName);	
 			}			 						
-			if(!this._target) {
-				if(factory != null) {
-					this._target = factory(p, this);					
-				}else if(this.targetClass != null){
-					this._target = new (this.targetClass)();
-					this._target.name = this.targetName;
-					p.addChild(this._target);
-				}
+			if(!this._target && this.targetClass != null) {
+				this._target = new (this.targetClass)();
+				this._target.name = this.targetName;
+				p.addChild(this._target);
 			}
 			if(!this._target) {
 				this._target = new DummyTarget();
 				if(this.targetName) this._target.name = this.targetName;				
 				p.addChild(this._target);
-			}			
-			return this._target;
+			}
+			
+			var r:DisplayObject = this._target;
+			if(!save) this._target = null;
+			return r;
 		}
 		
-		public function get val():DisplayObject {
-			return this._target;
+		public function setVal(val:DisplayObject):void {
+			this._target = val;
 		}
 		
 		public function clean():void {
@@ -61,6 +68,22 @@ package com.core.anima.base
 				this._target.parent.removeChild(this._target);
 			}
 			this._target = null;
+		}
+		
+		public function get val():DisplayObject {
+			return this._target;
+		}
+		
+		public function get clipVal():MovieClip {
+			return this._target as MovieClip;
+		}
+		
+		public function get spriteVal():Sprite {
+			return this._target as Sprite;
+		}
+		
+		public function get bitmapVal():Bitmap {
+			return this._target as Bitmap;
 		}
 	}
 }

@@ -1,9 +1,8 @@
 package com.core.anima.clip
 {
 	import com.core.anima.base.AnimaTarget;
-	import com.core.anima.base.BaseAnima;
+	import com.core.anima.base.AnimaBase;
 	import com.core.anima.base.DummyTarget;
-	import com.core.anima.base.IAnima;
 	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
@@ -11,32 +10,26 @@ package com.core.anima.clip
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	
-	public class ClipAnima extends BaseAnima
+	public class ClipAnima extends AnimaBase
 	{
-		private var _cur:Number;		
-		private var _start:int = 0;
-		private var _startLabel:String;
-		private var _end:int = 0;
-		private var _endLabel:String;		
-		private var _target:AnimaTarget = new AnimaTarget();
-		private var _listenOnFrame:Boolean = false;
-		private var _playing:Boolean = false;
+		private var _prototype:ClipAnimaPrototype; //动画数据
+		private var _cur:Number;	//当前播放到的帧	
+		private var _start:int = 0; //开始帧
+		private var _end:int = 0; //结束帧
+		private var _target:AnimaTarget; //动画对应的movieclip信息
+		private var _listening:Boolean = false; //是否在监听逐帧事件
+		private var _playing:Boolean = false; //是否在播放
 		
-		public function setTarget(name:String, c:Class):ClipAnima {
-			this._target.targetName = name;
-			this._target.targetClass = c;
-			return this;
+		public function ClipAnima(proptotype:ClipAnimaPrototype = null) {
+			this.prototype(proptotype);
 		}
 		
-		public function clipByLabel(startLabel:String, endLabel:String = ''):ClipAnima {
-			this._startLabel = startLabel;
-			this._endLabel = endLabel;
-			return this;
-		}
-		
-		public function clipByFrame(start:int, end:int = 0):ClipAnima {
-			this._start = start;
-			this._end = end;
+		public function prototype(prototype:ClipAnimaPrototype):ClipAnima {
+			if(prototype) {
+				if(this._prototype) this.stop(false);
+				this._prototype = prototype;
+				this._target = prototype.genTarget();
+			}
 			return this;
 		}
 		
@@ -44,51 +37,40 @@ package com.core.anima.clip
 			return this._end - this._start;
 		}
 		
+		override public function clone():AnimaBase {
+			return this.cloneBase(new ClipAnima(this._prototype));
+		}
+		
 		override public function get playing():Boolean {
 			return this._playing;
 		}
 		
-		override public function clone():IAnima {
-			var tmp:ClipAnima = new ClipAnima;
-			this.cloneBase(tmp);
-			tmp._target = this._target.clone();
-			tmp._startLabel = this._startLabel;
-			tmp._start = this._start;
-			tmp._endLabel = this._endLabel;
-			tmp._end = this._end;
-			return tmp;
-		}
-		
-		override public function play(p:DisplayObjectContainer, px:Number=0, py:Number=0):void {
+		/**
+		 * play之前必须保证设置prototype
+		 * */
+		override public function play(p:DisplayObjectContainer):void {
 			this.stop(false);
-			var clip:MovieClip = this._target.load(p) as MovieClip;
-			clip.stop();
-			clip.x = px;
-			clip.y = py;			
-			if(this._start <= 0) {
-				if(this._startLabel) this._start = this._findFrameByLabel(this._startLabel, clip); 			
-				if(this._start <= 0) this._start = 1;
-			}
-			if(this._end <= 0) {
-				if(this._endLabel) this._end = this._findFrameByLabel(this._endLabel, clip);
-				if(this._end <= 0) this._end = clip.totalFrames + 1;	
-			}
-			this._cur = this._start;			
-			clip.gotoAndStop(this._cur);
-			if(this._autoPlay && !this._listenOnFrame) {
-				clip.addEventListener(Event.ENTER_FRAME, this._onFrame);
+			this._target.findAt(p); //从container中找到动画对象
+			this._target.val.visible = true; //动画对象可见
+			if(!isNaN(this._posX)) this._target.val.x = this._posX;
+			if(!isNaN(this._posY)) this._target.val.y = this._posY;
+			this._start = this._prototype.genStart(this._target.clipVal);
+			this._end = this._prototype.genEnd(this._target.clipVal);
+			this._cur = this._start;
+			this._target.clipVal.gotoAndStop(this._cur);
+			if(this._autoPlay && !this._listening) {
+				this._target.val.addEventListener(Event.ENTER_FRAME, this._onFrame);
+				this._listening = true;
 			}
 			this._playing = true;
 		}
 		
-		override public function stop(clean:Boolean=true):void {
-			if(this._listenOnFrame && this._target.val) {
+		override public function stop(clean:Boolean=false):void {
+			if(this._listening && this._target.val) {
 				this._target.val.removeEventListener(Event.ENTER_FRAME, this._onFrame);
-				this._listenOnFrame = false;
+				this._listening = false;
 			}
-			if(clean) {
-				this._target.clean();
-			}
+			if(clean) this._target.clean();
 			this._playing = false;
 		}
 		
@@ -101,9 +83,11 @@ package com.core.anima.clip
 				}
 				if(this._removeOnEnd) {
 					this.stop(true);
-					return;
-				}
-				if(this._loopOnEnd) {
+				}else if(this._hideOnEnd) {
+					this._target.val.visible = false;
+					this._cur = this._end - 1;
+					this.stop(false);
+				}else if(this._loopOnEnd) {				 
 					this._cur = this._start;
 				}else {
 					this._cur = this._end - 1;
@@ -111,7 +95,8 @@ package com.core.anima.clip
 				}
 			}
 			
-			var clip:MovieClip = this._target.val as MovieClip;
+			//尽量使用nextFrame 不确定是否对性能有利
+			var clip:MovieClip = this._target.clipVal;
 			var d:int = this._cur - clip.currentFrame;
 			if(d) {
 				if(d == 1) {
@@ -125,16 +110,5 @@ package com.core.anima.clip
 		private function _onFrame(e:Event):void {
 			this.update();
 		}		
-		
-		private function _findFrameByLabel(label:String, clip:MovieClip):int {
-			var arr:Array = clip.currentLabels;
-			for(var i:int = 0; i < arr.length; ++i) {
-				var f:FrameLabel = arr[i];
-				if(f.name == label) {
-					return f.frame;
-				}
-			}
-			return 0;
-		}
 	}
 }

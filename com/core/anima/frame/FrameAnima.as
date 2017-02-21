@@ -1,8 +1,7 @@
 package com.core.anima.frame
 {
 	import com.core.anima.base.AnimaTarget;
-	import com.core.anima.base.BaseAnima;
-	import com.core.anima.base.IAnima;
+	import com.core.anima.base.AnimaBase;
 	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -11,46 +10,34 @@ package com.core.anima.frame
 	import flash.events.Event;
 	import flash.geom.Point;
 	
-	public class FrameAnima extends BaseAnima
+	public class FrameAnima extends AnimaBase
 	{
-		private var _dpos:Point;		
-		private var _frames:Array = new Array();
-		private var _cur:Number;
-		private var _length:int;
-		private var _target:AnimaTarget = new AnimaTarget();
-		private var _listenOnFrame:Boolean = false;		
-		private var _playing:Boolean = false;
+		private var _prototype:FrameAnimaPrototype; 		
 		
-		public function dpos(px:Number, py:Number):FrameAnima {
-			this._dpos = new Point(px, py);
+		private var _cur:Number; //当前播放帧
+		private var _length:Number = 0; //动画总帧数
+		private var _frames:Array;
+		private var _target:AnimaTarget = new AnimaTarget(); //动画对象
+		private var _listening:Boolean = false; //是否在监听逐帧事件		
+		private var _playing:Boolean = false; //是否在播放
+		
+		public function FrameAnima(pt:FrameAnimaPrototype = null) {
+			this.prototype(pt);
+		}
+		
+		public function prototype(pt:FrameAnimaPrototype):FrameAnima {
+			if(pt) {
+				if(this._prototype) this.stop(false);
+				this._prototype = pt;
+				this._target = this._prototype.genTarget();
+				this._length = this._prototype.frameTotal;
+				this._frames = this._prototype.frames;
+			}
 			return this;
 		}
 		
-		public function frame(delta:int):FrameAnima {
-			this._length += delta;
-			return this;
-		}
-		
-		public function frameAt(pos:int):FrameAnima {
-			if(this._length < pos) this._length = pos;
-			return this;
-		}
-		
-		public function keyFrame(delta:int, bitmapData:BitmapData):FrameAnima {
-			this._length += delta;
-			this._frames[this._length] = bitmapData;
-			return this;
-		}
-		
-		public function keyFrameAt(pos:int, bitmapData:BitmapData):FrameAnima {
-			if(this._length < pos) this._length = pos;
-			this._frames[pos] = bitmapData;
-			return this;
-		}
-		
-		public function setTarget(name:String):FrameAnima {
-			this._target.targetName = name;
-			return this;
+		override public function clone():AnimaBase {
+			return this.cloneBase(new FrameAnima(this._prototype));
 		}
 		
 		public function get length():int {
@@ -61,38 +48,28 @@ package com.core.anima.frame
 			return this._playing;
 		}
 		
-		override public function clone():IAnima {
-			var tmp:FrameAnima = new FrameAnima();
-			this.cloneBase(tmp);
-			tmp._dpos = this._dpos;
-			tmp._frames = this._frames;
-			tmp._length = this._length;
-			tmp._target = this._target.clone();
-			return tmp;
-		}
-		
-		override public function play(p:DisplayObjectContainer, px:Number=0, py:Number=0):void {
+		/**
+		 * play之前必须保证设置prototype和parent
+		 * */
+		override public function play(p:DisplayObjectContainer):void {
 			this.stop(false);
-			this._target.load(p, this._targetFactory);
-			this._target.val.x = px;
-			this._target.val.y = py;
-			if(this._dpos) {
-				this._target.val.x += this._dpos.x;
-				this._target.val.y += this._dpos.y;
-			}
+			this._target.findAt(p); //从container中找到动画对象
+			this._target.val.visible = true; //动画对象可见
+			if(!isNaN(this._posX)) this._target.val.x = this._posX;
+			if(!isNaN(this._posY)) this._target.val.y = this._posY;
 			this._cur = 1;
 			this._renderFrame();
-			if(this._autoPlay && !this._listenOnFrame) {
+			if(this._autoPlay && !this._listening) {
 				this._target.val.addEventListener(Event.ENTER_FRAME, this._onFrame);
-				this._listenOnFrame = true;
+				this._listening = true;
 			}
 			this._playing = true;
 		}
 		
-		override public function stop(clean:Boolean=true):void {
-			if(this._listenOnFrame && this._target.val) {					
+		override public function stop(clean:Boolean=false):void {
+			if(this._listening && this._target.val) {					
 				this._target.val.removeEventListener(Event.ENTER_FRAME, this._onFrame);	
-				this._listenOnFrame = false;
+				this._listening = false;
 			}
 			if(clean) {				
 				this._target.clean();
@@ -103,22 +80,22 @@ package com.core.anima.frame
 		override public function update(delta:Number=1):void {
 			if(!this._playing) return;
 			this._cur += delta;
-			if(int(this._cur) > this._length) {				
+			if(int(this._cur) > this.length) {				
 				if(this._onEnd != null) {
 					this._onEnd(this);
 				}				
 				if(this._removeOnEnd) {
 					this.stop(true);
 					return;
-				}				
-				if(this._loopOnEnd) {
+				}else if(this._hideOnEnd){
+					this._target.val.visible = false;
+					this._cur = this.length;
+					this.stop(false);
+				}if(this._loopOnEnd) {
 					this._cur = 1;
 				}else {
-					this._cur = this._length;					
-					if(this._listenOnFrame) {					
-						this._target.val.removeEventListener(Event.ENTER_FRAME, this._onFrame);
-						this._listenOnFrame = false;
-					}
+					this._cur = this.length;
+					this.stop(false);
 				}																
 			}
 			this._renderFrame();
@@ -126,18 +103,8 @@ package com.core.anima.frame
 		
 		private function _renderFrame():void {
 			var data:BitmapData = this._frames[int(this._cur)];
-			if(data) {
-				var bmp:Bitmap = (this._target.val) as Bitmap;
-				bmp.bitmapData = data;
-			}
+			if(data) this._target.bitmapVal.bitmapData = data;
 		}		
-		
-		private function _targetFactory(p:DisplayObjectContainer, data:AnimaTarget):DisplayObject {
-			var val:Bitmap = new Bitmap();
-			val.name = data.targetName;
-			p.addChild(val);
-			return val;
-		}
 		
 		private function _onFrame(e:Event):void {
 			this.update();
